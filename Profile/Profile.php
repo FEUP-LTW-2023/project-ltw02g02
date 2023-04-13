@@ -12,7 +12,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="Profile.css">
 </head>
 <body>
 	<div class="container">

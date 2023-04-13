@@ -1,0 +1,122 @@
+/* Estilos gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEFA;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos do cabeçalho */
+  
+  .header {
+    background-color: #87CEFA;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .header__logo img {
+    height: 2.5rem;
+  }
+  
+  .header__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header__item {
+    list-style: none;
+    margin-left: 1rem;
+  }
+  
+  .header__item:first-child {
+    margin-left: 0;
+  }
+  
+  .header__item a {
+    font-weight: bold;
+  }
+  
+  /* Estilos do formulário */
+  
+  .container {
+    margin: 2rem auto;
+    max-width: 960px;
+    padding: 0 1rem;
+  }
+  
+  .main__heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  textarea {
+    height: 10rem;
+  }
+  
+  .profile__button {
+    background-color: #337ab7;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .profile__button:hover {
+    background-color: #286090;
+    cursor: pointer;
+  }
+  
+  /* Estilos do rodapé */
+  
+  .footer {
+	background-color: #87CEFA;
+	border-top: 1px solid black;
+	padding: 20px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+.footer__text {
+	font-size: 14px;
+}
+
+.footer__link {
+	margin-left: 10px;
+}
