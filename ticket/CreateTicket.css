@@ -24,16 +24,10 @@ body {
   
   
   
-  .header {
-    background-color: #87CEFA;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    top: 0;
-	left: 0;
-	right: 0;
-    z-index: 999;
+  header {
+    color: #fff;
+    padding: 10px;
+    top:20px;
   }
 
 
@@ -123,4 +117,39 @@ body {
 	margin-left: 10px;
 }
 
+.foto-perfil {
+	border-radius: 50%;
+	width: 30px; /* ou qualquer tamanho desejado */
+	height: 30px; /* ou qualquer tamanho desejado */
+	position: absolute;
+	top: 20px; /* ou qualquer valor desejado */
+	right: 10px; /* ou qualquer valor desejado */
+  }
+
+  .nome-usuario {
+	position: absolute;
+	top: 25px; /* ou qualquer valor desejado */
+	right: 70px; /* ou qualquer valor desejado */
+	color: #fff; /* ou qualquer cor desejada */
+	
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
   

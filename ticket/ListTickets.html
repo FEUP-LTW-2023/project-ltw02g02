@@ -6,15 +6,19 @@
     <link rel="stylesheet" href="ListTicket.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="logo.png" alt="Logo">
-      </div>
-      <ul class="header__list">
-        <li class="header__item"><a href="#">Home</a></li>
-        <li class="header__item"><a href="#">Create Ticket</a></li>
-        <li class="header__item"><a href="#">List Tickets</a></li>
-      </ul>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="../ticket/ListTickets.html">Tickets</a></li>
+          <li><a href="#">Contact</a></li>
+          
+        </ul>
+      </nav>
+      <span class="nome-usuario">Quim</span>
+      <img src="nome-da-imagem.jpg" alt="Foto de perfil" class="foto-perfil">
+  
     </header>
     <div class="container">
       <h1 class="main__heading">Lista Tickets</h1>
@@ -24,10 +28,11 @@
             <th>ID</th>
             <th>Assunto</th>
             <th>Categoria</th>
-            <th>Estado</th>
+            
             <th>Criação</th>
-            <th>Ultimo Update</th>
             <th>Prioridade</th>
+            <th>Resolvido</th> 
+
           </tr>
         </thead>
         <tbody>
@@ -35,28 +40,28 @@
             <td>TCKT-001</td>
             <td>Website not loading</td>
             <td>Technical</td>
-            <td>New</td>
-            <td>2023-04-12 09:35:12</td>
+            
             <td>2023-04-12 09:35:12</td>
             <td>High</td>
+            <td>Sim</td>
           </tr>
           <tr>
             <td>TCKT-002</td>
             <td>Can't login to account</td>
             <td>Account</td>
-            <td>Pending</td>
+            
             <td>2023-04-11 13:22:45</td>
-            <td>2023-04-12 10:45:19</td>
             <td>Low</td>
+            <td>Não</td>
           </tr>
           <tr>
             <td>TCKT-003</td>
             <td>Incorrect billing statement</td>
             <td>Billing</td>
-            <td>Closed</td>
+           
             <td>2023-04-09 16:50:23</td>
-            <td>2023-04-10 14:20:06</td>
             <td>Medium</td>
+            <td>Sim</td>
           </tr>
         </tbody>
       </table>
