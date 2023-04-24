@@ -16,10 +16,10 @@ CREATE TABLE User (
   email TEXT NOT NULL UNIQUE,
   user_password TEXT NOT NULL,
   user_type TEXT NOT NULL CHECK (user_type IN ('Client', 'Agent', 'Admin')),
-  depart_id INTEGER REFERENCES Department(depart_id) 
+  user_depart_id INTEGER REFERENCES Department(depart_id) 
           ON DELETE SET NULL
           ON UPDATE CASCADE
-          CHECK (user_type <> 'Client' OR depart_id IS NULL)
+          CHECK (user_type <> 'Client' OR user_depart_id IS NULL)
 );
 
 CREATE TABLE Department (
@@ -41,17 +41,17 @@ CREATE TABLE Ticket (
   ticket_id INTEGER PRIMARY KEY,
   ticket_subject TEXT NOT NULL,
   ticket_description TEXT NOT NULL,
-  ticket_priority TEXT CHECK (ticket_priority IN ('High', 'Medium', 'Low')),
+  ticket_priority TEXT DEFAULT 'Low' CHECK (ticket_priority IN ('High', 'Medium', 'Low')),
   status_id INTEGER NOT NULL DEFAULT 1 REFERENCES TicketStatus (status_id)
           ON DELETE SET DEFAULT
           ON UPDATE CASCADE,
   hashtag_id INTEGER REFERENCES Hashtag (hashtag_id)
           ON DELETE SET NULL
           ON UPDATE CASCADE,
-  department_id INTEGER REFERENCES Department (depart_id)
+  ticket_depart_id INTEGER REFERENCES Department (depart_id)
           ON DELETE SET NULL
           ON UPDATE CASCADE,
-  user_id INTEGER NOT NULL REFERENCES User (user_id)
+  ticket_user_id INTEGER NOT NULL REFERENCES User (user_id)
           ON DELETE CASCADE
           ON UPDATE CASCADE,
   agent_id INTEGER REFERENCES User (user_id)
@@ -63,8 +63,8 @@ CREATE TABLE Ticket (
 
 CREATE TABLE TicketInquiry (
   inquiry_id INTEGER PRIMARY KEY,
-  ticket_id INTEGER NOT NULL REFERENCES Ticket (ticket_id),
-  user_id INTEGER NOT NULL REFERENCES User (user_id),
+  inquiry_ticket_id INTEGER NOT NULL REFERENCES Ticket (ticket_id),
+  inquiry_user_id INTEGER NOT NULL REFERENCES User (user_id),
   comment TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

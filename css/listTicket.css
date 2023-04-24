@@ -1,60 +1,17 @@
 /* Estilos gerais */
+  
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    background-color: #87CEFA;
-  }
-  
-  a {
-    color: #337ab7;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
   
   /* Estilos do cabeçalho */
   
-  .header {
-    background-color: #87CEFA;
-    border-bottom: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    top: 0;
-	left: 0;
-	right: 0;
-    z-index: 999;
-  }
+
 
   
-  .header__logo img {
-    height: 2.5rem;
-  }
+
   
-  .header__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
   
-  .header__item {
-    list-style: none;
-    margin-left: 1rem;
-  }
-  
-  .header__item:first-child {
-    margin-left: 0;
-  }
-  
-  .header__item a {
-    font-weight: bold;
-  }
+
+
   
   /* Estilos da tabela de tickets */
   
@@ -84,6 +41,7 @@ body {
   
   table td {
     background-color: #F5F5F5;
+    font-weight: bold;
     border: 1px solid #ddd;
     padding: 0.5rem;
   }
@@ -92,9 +50,6 @@ body {
     color: #337ab7;
   }
   
-  table td:last-child {
-    text-align: center;
-  }
   
   table td.status--open {
     color: green;
@@ -109,23 +64,4 @@ body {
   }
   
   /* Estilos do rodapé */
-  
-  .footer {
-	background-color: #87CEFA;
-	border-top: 1px solid black;
-	padding: 20px;
-	text-align: center;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 999;
-}
 
-.footer__text {
-	font-size: 14px;
-}
-
-.footer__link {
-	margin-left: 10px;
-}

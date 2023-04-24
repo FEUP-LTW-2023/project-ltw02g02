@@ -5,19 +5,37 @@
 <?php function output_header() { ?>
     <!DOCTYPE html>
     <html lang="en-US">
-        <head>
-            <title>TV Solution</title>    
+        <head>    
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>TV Solution</title>
             <link href="../css/style.css" rel="stylesheet">
-            <link href="../css/register.css" rel="stylesheet">
-            
+            <link href="../css/layout.css" rel="stylesheet">
+            <link href="../css/forms.css" rel="stylesheet">
         </head>
         <body>
             <header>
-                <h1><a href="/">TV Solution</a></h1>
-                <nav id="menu">
-
+                <h1><a href="/"><span class="title__part1">TV</span> <span class="title__part2">Solution</span></a></h1>
+                <nav>
+                    <ul class="menu-items">
+                    <li><a href="../main/Main.html">Home</a></li>
+                    <?php if (isset($_SESSION['user_id'])) { ?>
+                    <li class="dropdown">
+                        <a href="#">Ticket</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../pages/createTicket.php">Create</a></li>
+                            <li><a href="../pages/listTickets.php">List</a></li>
+                        </ul>
+                    </li>
+                    <?php } ?>
+                    <li><a href="../pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                    <?php if (isset($_SESSION['user_id'])) { ?>
+                        <li><a href="../pages/profile.php">Account</a></li>
+                        <?php } else { ?>
+                        <li><a href="../pages/login.php">Account</a></li>
+                        <?php } ?>
+                    </ul>
                 </nav>
             </header>
             <main>
@@ -25,8 +43,10 @@
 
 <?php function output_footer() { ?>
         </main>
-            <footer>
-            <p>&copy; TV Solution, 2000</p>   
+            <footer class="main-footer">
+            <p class="footer__text"> Copyright 2023 &copy; TV Solution</p>   
+            <a href="#" class="footer__link">Privacy Policy</a>
+			<a href="#" class="footer__link">Terms of Service</a>
             </footer>
         </body>
     </html>

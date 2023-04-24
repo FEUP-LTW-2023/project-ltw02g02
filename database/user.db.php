@@ -22,14 +22,34 @@
     function getUserByUsername(PDO $dbh, $username) {
         try {
             $stmt = $dbh->prepare('SELECT * FROM User WHERE username = ?');
+            
             $stmt->execute(array($username));
+
+            $user = $stmt->fetch();
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
 
-        $user = $stmt->fetch();
-
         return $user;
+    }
+
+    function editProfile($dbh, $user) {
+
+        try {
+        $stmt = $dbh->prepare('UPDATE User SET user_name = :user_name, username = :username, email = :email WHERE user_id = :user_id');
+        
+        $stmt->bindParam(':user_name', $user->name);
+        $stmt->bindParam(':username', $user->username);
+        $stmt->bindParam(':email', $user->email);
+        $stmt->bindParam(':user_id', $user->id);
+
+        $stmt->execute();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            exit(0);
+        }
+
+        return true;
     }
 
 

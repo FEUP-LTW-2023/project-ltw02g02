@@ -11,7 +11,7 @@ html {
 
 /* Global styles */
 body {
-	background-color: #87CEFA;
+	background-color: #046DFF;
 	color: #333;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
@@ -19,7 +19,7 @@ body {
 }
 
 a {
-	color: #0070c0;
+	color: black;
 	text-decoration: none;
 }
 
@@ -28,8 +28,8 @@ a:hover {
 }
 
 /* Header styles */
-.header {
-	background-color: #87CEFA;
+header {
+	background-color: #046DFF;
 	border-bottom: 1px solid black;
 	padding: 10px 20px;
 	position: fixed;
@@ -157,8 +157,8 @@ a:hover {
 }
 
 /* Footer styles */
-.footer {
-	background-color: #87CEFA;
+footer {
+	background-color: #046DFF;
 	border-top: 1px solid black;
 	padding: 20px;
 	text-align: center;
@@ -171,8 +171,28 @@ a:hover {
 
 .footer__text {
 	font-size: 14px;
+	color: black;
 }
 
 .footer__link {
 	margin-left: 10px;
+	color: black;
 }
+
+
+.foto-perfil {
+	border-radius: 50%;
+	width: 30px; /* ou qualquer tamanho desejado */
+	height: 30px; /* ou qualquer tamanho desejado */
+	position: absolute;
+	top: 20px; /* ou qualquer valor desejado */
+	right: 10px; /* ou qualquer valor desejado */
+  }
+
+  .nome-usuario {
+	position: absolute;
+	top: 25px; /* ou qualquer valor desejado */
+	right: 70px; /* ou qualquer valor desejado */
+	color: #fff; /* ou qualquer cor desejada */
+	
+  }

@@ -18,15 +18,15 @@
 
 <?php function output_register() { ?>
   <div class="container">
-    <h1>SIGN UP</h1>
+    <h2>SIGN UP</h2>
     <form action="../actions/register.action.php" method="post">
-      <label for="name">Name</label>
+      <label for="name">Name:</label>
       <input type="text" id="name" name="name" required placeholder="Enter full name">
-      <label for="username">Username</label>
+      <label for="username">Username:</label>
       <input type="text" id="username" name="username" required placeholder="Enter username">
-      <label for="email">Email</label>
+      <label for="email">Email:</label>
       <input type="email" id="email" name="email" required placeholder="Enter email">
-      <label for="password">Password</label>
+      <label for="password">Password:</label>
       <input type="password" id="password" name="password" required placeholder="Enter password">
       <input type="submit" value="Sign Up">
       <footer>
@@ -36,4 +36,21 @@
   </div>
     <?php } ?>
 
-    
+<?php function output_createTicket($departments) { ?>
+  <div class="container">
+    <h2>Create a New Ticket</h2>
+    <form action="../actions/createTicket.action.php" method="post">
+              <label for="department">Choose a department:</label>
+              <select name="department">
+                  <option value='' selected></option>
+                  <?php foreach ($departments as $department) ?>
+                  <option value=<?=$department['depart_id']?>><?=htmlentities($department['depart_name'])?></option>
+              </select> 
+              <label for="subject">Subject:</label>
+              <input type="text" name="subject" required>
+              <label for="description">Description:</label>
+              <textarea name="description" rows="5" cols="60"></textarea>
+              <input type="submit" value="Create">
+    </form>
+  </div>
+  <?php } ?>

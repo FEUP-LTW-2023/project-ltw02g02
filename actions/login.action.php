@@ -39,5 +39,5 @@
     $_SESSION['user_type'] = $user['user_type'];
     $_SESSION['user_depart_id'] = $user['depart_id'];
     
-    header('Location: ../pages/index.php');
+    header('Location: ../pages/profile.php');
 ?>

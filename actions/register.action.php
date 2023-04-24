@@ -34,6 +34,7 @@
 
     $dbh = getDatabaseConnection();
     if (!registerUser($dbh, $name, $username, $email, $hashed_password)) {
+        echo 'User could not be register';
         die(header('Location: ../pages/register.php'));
     }
 
