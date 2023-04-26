@@ -41,15 +41,16 @@
     <h2>Create a New Ticket</h2>
     <form action="../actions/createTicket.action.php" method="post">
               <label for="department">Choose a department:</label>
-              <select name="department">
+              <select id="department" name="department">
                   <option value='' selected></option>
-                  <?php foreach ($departments as $department) ?>
-                  <option value=<?=$department['depart_id']?>><?=htmlentities($department['depart_name'])?></option>
+                  <?php foreach ($departments as $department) { ?>
+                  <option value="<?=$department['depart_id']?>"><?=htmlentities($department['depart_name'])?></option>
+                  <?php } ?>
               </select> 
               <label for="subject">Subject:</label>
-              <input type="text" name="subject" required>
+              <input type="text" id="subject" name="subject" required>
               <label for="description">Description:</label>
-              <textarea name="description" rows="5" cols="60"></textarea>
+              <textarea id="description" name="description" rows="5" cols="60"></textarea>
               <input type="submit" value="Create">
     </form>
   </div>

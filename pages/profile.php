@@ -8,8 +8,9 @@
     require_once('../templates/profile.tpl.php');
 
     $edit = isset($_GET['edit']);
+    $user_type = $_SESSION['user_type'];
 
     output_header();
-    output_profile($edit);
+    output_profile($edit, $user_type);
     output_footer();
 ?>

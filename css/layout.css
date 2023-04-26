@@ -35,7 +35,7 @@
     cursor: pointer;
     color: white;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
   }
@@ -47,11 +47,13 @@
 .main-footer {
     background-color: #046DFF;
     text-align: center;
+    margin: 20px 0 0 0;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
     bottom: 0;
     left: 0;
-    position: absolute;
+    max-height: 45px;
     width: 100%;
     font-family: Arial, sans-serif;
     border-top: 1px solid black;
@@ -77,6 +79,29 @@
     font-weight: bold;
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 100px auto;
-    padding: 15px auto;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;  
+}
+
+.admin-container {
+  position: relative;
+  top: 10px;
+  margin: 50px 20px 30px 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#track_ticket {
+  margin-top: 50px;
+}
+
+
+.admin-container h2 {
+  font-size: 24px;
 }

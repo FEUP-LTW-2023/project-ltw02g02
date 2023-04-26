@@ -9,15 +9,18 @@
     require_once('../templates/ticket.tpl.php');
 
     $dbh = getDatabaseConnection();
-    if ($_SESSION['user_type'] == 'Client') {
-        $tickets = getAllTicketsByUser($dbh, intval($_SESSION['user_id']));
-    } else if ($_SESSION['user_type'] == 'Agent') {
-        $tickets = getAllTicketsByAgent($dbh, intval($_SESSION['depart_id']));
-    } else {
+    $user_type = $_SESSION['user_type'];
+    $tickets = [];
+
+    $clientTickets = getAllTicketsByUser($dbh, intval($_SESSION['user_id']));
+    if ($user_type === 'Agent') {
+        $tickets = getAllTicketsByDepartment($dbh, intval($_SESSION['user_depart_id']));
+    } else if ($user_type === 'Admin') {
         $tickets = getAllTickets($dbh);
     }
 
     output_header();
-    output_listTickets($tickets);
+    output_listClientTickets($clientTickets, $user_type);
+    if ($user_type !== 'Client') output_listAgentTickets($tickets);
     output_footer();
 ?>

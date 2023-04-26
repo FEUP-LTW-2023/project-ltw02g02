@@ -18,7 +18,7 @@
 
     //FAZER A VALIDAÇÃO DOS INPUTS!!!!!!!!!!!!
 
-    $ticket = new Ticket($subject, $description, $department, $user_id);
+    $ticket = new Ticket(NULL, $subject, $description, NULL, $department, $user_id);
     $dbh = getDatabaseConnection();
     if (!createTicket($dbh, $ticket)) {
         echo 'Ticket could not be created';
