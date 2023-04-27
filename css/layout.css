@@ -27,7 +27,7 @@
     padding: 10px;
   }
 
-.profile-buttons a {
+.profile-buttons a, .ticket_list_link {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -100,7 +100,6 @@
 #track_ticket {
   margin-top: 50px;
 }
-
 
 .admin-container h2 {
   font-size: 24px;

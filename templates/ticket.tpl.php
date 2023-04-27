@@ -25,8 +25,8 @@
         <tbody>
           <?php foreach ($tickets as $ticket) { ?>
           <tr>
-            <td><?=$ticket['ticket_id']?></td>
-            <td><a href="../pages/trackTicket.php?id=<?=$ticket['ticket_id']?>"><?=htmlentities($ticket['ticket_subject'])?></a></td>
+            <td><a href="../pages/trackTicket.php?id=<?=$ticket['ticket_id']?>" class="ticket_list_link"><?=$ticket['ticket_id']?></a></td>
+            <td><?=htmlentities($ticket['ticket_subject'])?></td>
             <td><?=$ticket['depart_name']?></td>
             <td><?=htmlentities($ticket['status_name'])?></td>
             <td><?=htmlentities($ticket['created_at'])?></td>
@@ -63,8 +63,8 @@
         <tbody>
           <?php foreach ($tickets as $ticket) { ?>
           <tr>
-            <td><?=$ticket['ticket_id']?></td>
-            <td><a href="../pages/trackTicket.php?id=<?=$ticket['ticket_id']?>"><?=htmlentities($ticket['ticket_subject'])?></a></td>
+            <td><a href="../pages/trackTicket.php?id=<?=$ticket['ticket_id']?>" class="ticket_list_link"><?=$ticket['ticket_id']?></a></td>
+            <td><?=htmlentities($ticket['ticket_subject'])?></td>
             <td><?=$ticket['depart_name']?></td>
             <td><?=htmlentities($ticket['status_name'])?></td>
             <td><?=htmlentities($ticket['created_at'])?></td>

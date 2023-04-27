@@ -50,7 +50,7 @@
               <label for="subject">Subject:</label>
               <input type="text" id="subject" name="subject" required>
               <label for="description">Description:</label>
-              <textarea id="description" name="description" rows="5" cols="60"></textarea>
+              <textarea id="description" name="description" rows="5" cols="60" required></textarea>
               <input type="submit" value="Create">
     </form>
   </div>
