@@ -7,10 +7,10 @@
   <div class="ticket_container">
       <?php if (empty($tickets)) { 
                 if ($user_type === 'Client') { ?> 
-                <h2 class="main__heading">You don't have any tickets to show</h2>
+                <h2>You don't have any tickets to show</h2>
                 <?php } ?>
       <?php } else { ?> 
-      <h2 class="main__heading">My Tickets</h2>
+      <h2 class="table_title">My Tickets</h2>
       <table class="ticket__table">
         <thead>
           <tr>
@@ -42,9 +42,8 @@
 <?php function output_listAgentTickets($tickets) { ?>
   <div class="ticket_container">
       <?php if (empty($tickets)) { ?>
-                <h2 class="main__heading">You don't have any tickets to manage</h2>
+                <h2>You don't have any tickets to manage</h2>
               <?php } else { ?>
-      <h2 class="main__heading">Manage Tickets</h2>
       <table class="ticket__table">
         <thead>
           <tr>

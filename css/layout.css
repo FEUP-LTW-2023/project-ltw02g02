@@ -79,10 +79,10 @@
     font-weight: bold;
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     padding: 20px;  
-}
+  }
 
 .admin-container {
   position: relative;
@@ -95,12 +95,52 @@
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
+  }
 
 #track_ticket {
   margin-top: 50px;
-}
+  }
 
 .admin-container h2 {
   font-size: 24px;
-}
+  }
+
+.table_title {
+  text-align: left;
+  font-weight: lighter;
+  }
+
+.filter__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  padding: 20px 20px 0;
+  }
+  
+.filter__options form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  
+.filter__options label {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  }
+    
+.filter__options select {
+  padding: 8px;
+  margin: 0 15px 0 0;
+  border-radius: 5px;
+  border: solid 1px black;
+  background-color: white;
+  font-size: 16px;
+  }
+    
+.filter__options input {
+  margin-left: 10px;
+  }
+  

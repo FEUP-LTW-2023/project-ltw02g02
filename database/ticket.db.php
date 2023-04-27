@@ -82,11 +82,42 @@
         return $tickets;
     }
 
-function getAllTickets(PDO $dbh) {
+    function getAllTickets(PDO $dbh) {
         try {
             $stmt = $dbh->prepare('SELECT Ticket.*, TicketStatus.*, Client.*, Department.*, Hashtag.*, Agent.user_id AS AgentID, Agent.user_name AS AgentName, Agent.username AS AgentUsername, Agent.email AS AgentEmail, Agent.user_password AS AgentPassword, Agent.user_type AS AgentType, Agent.user_depart_id AS AgentDepartID FROM Ticket JOIN TicketStatus USING (status_id) JOIN User AS Client ON ticket_user_id = Client.user_id LEFT JOIN Department ON ticket_depart_id = Department.depart_id LEFT JOIN Hashtag USING (hashtag_id) LEFT JOIN User AS Agent ON agent_id = Agent.user_id');
 
             $stmt->execute();
+
+            $tickets = $stmt->fetchAll();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        return $tickets;
+    }
+
+    function getAllTicketsQuery(PDO $dbh, $query, $bind) {
+        try {
+            $stmt = $dbh->prepare($query);
+
+            $stmt->execute($bind);
+
+            $tickets = $stmt->fetchAll();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        return $tickets;
+    }
+
+    function getAllTicketsByDepartmentQuery(PDO $dbh, $query, $bind, ?int $user_depart_id) {
+        try {
+            $query .= " AND (ticket_depart_id = ? OR ticket_depart_id IS NULL)";
+            $bind[] = $user_depart_id;
+
+            $stmt = $dbh->prepare($query);
+                
+            $stmt->execute($bind);
 
             $tickets = $stmt->fetchAll();
         } catch (PDOException $e) {

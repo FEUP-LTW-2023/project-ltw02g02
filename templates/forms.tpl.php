@@ -55,3 +55,47 @@
     </form>
   </div>
   <?php } ?>
+
+  <?php function output_filterOptions($agents, $statuses, $hashtags) { ?>
+    <div class="filter__options">
+      <h2 class="table_title">Manage Tickets</h2>
+      <form action="../pages/listTickets.php" method="get">
+        <label for="date_filter">Filter by date:</label>
+        <select name="date_filter" id="date_filter">
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="7days">Last 7 days</option>
+          <option value="30days">Last 30 days</option>
+        </select>
+        <label for="agent_id">Filter by agent:</label>
+        <select name="agent_id" id="agent_id">
+          <option value="all">All</option>
+          <?php foreach ($agents as $agent) {?>
+          <option value="<?=$agent['user_id']?>"><?=$agent['user_name']?></option>
+          <?php } ?>
+        </select>
+        <label for="status_id">Filter by status:</label>
+        <select name="status_id" id="status_id">
+          <option value="all">All</option>
+          <?php foreach ($statuses as $status) { ?>
+          <option value="<?=$status['status_id']?>"><?=$status['status_name']?></option>
+          <?php } ?>
+        </select>
+        <label for="priority">Filter by priority:</label>
+        <select name="priority" id="priority">
+          <option value="all">All</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <label for="hashtag_id">Filter by hashtag:</label>
+        <select name="hashtag_id" id="hashtag_id">
+          <option value="all">All</option>
+          <?php foreach ($hashtags as $hashtag) { ?>
+          <option value="<?=$hashtag['hashtag_id']?>"><?=$hashtag['hashtag_name']?></option>
+          <?php } ?>
+        </select>
+        <input type="submit" value="Filter">
+      </form>
+</div>
+  <?php } ?>
