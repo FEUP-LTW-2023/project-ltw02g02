@@ -1,0 +1,146 @@
+.title__part1 {
+    color: black;
+  }
+  
+.title__part2 {
+    color: white;
+  }
+
+.menu-items {
+    list-style-type: none;
+    display: flex;
+    margin-right: 5px;
+  }
+
+.profile-info {
+    margin-bottom: 20px;
+  }
+
+.profile-info p {
+    margin: 10px 0;
+  }
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+  }
+
+.profile-buttons a, .ticket_list_link {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #046DFF;
+    cursor: pointer;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+.profile-buttons a:hover {
+    background-color: #4A88C5;
+  }
+
+.main-footer {
+    background-color: #046DFF;
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    max-height: 45px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid black;
+  }
+
+.footer__text {
+    font-size: 17px;
+	  color: white;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  
+.footer__link {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+  }
+
+.ticket_container {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;  
+  }
+
+.admin-container {
+  position: relative;
+  top: 10px;
+  margin: 50px 20px 30px 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  }
+
+#track_ticket {
+  margin-top: 50px;
+  }
+
+.admin-container h2 {
+  font-size: 24px;
+  }
+
+.table_title {
+  text-align: left;
+  font-weight: lighter;
+  }
+
+.filter__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  padding: 20px 20px 0;
+  }
+  
+.filter__options form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  
+.filter__options label {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  }
+    
+.filter__options select {
+  padding: 8px;
+  margin: 0 15px 0 0;
+  border-radius: 5px;
+  border: solid 1px black;
+  background-color: white;
+  font-size: 16px;
+  }
+    
+.filter__options input {
+  margin-left: 10px;
+  }
+  
