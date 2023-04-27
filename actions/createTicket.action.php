@@ -25,5 +25,5 @@
         die(header('Location: ../pages/createTicket.php'));
     }
 
-    header('Location: ../pages/profile.php');
+    header('Location: ../pages/listTickets.php');
 ?>
