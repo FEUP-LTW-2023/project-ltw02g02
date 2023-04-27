@@ -15,6 +15,20 @@
         return $statuses;
     }
 
+    function getHashtagByName(PDO $dbh, $hashtag_name) {
+        try {
+            $stmt = $dbh->prepare('SELECT * FROM Hashtag WHERE hashtag_name = ?');
+            
+            $stmt->execute(array($hashtag_name));
+
+            $hashtag = $stmt->fetch();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        return $hashtag;
+    }
+
     function addHashtag(PDO $dbh, $hashtag_name) {
         try {
             $stmt = $dbh->prepare('INSERT INTO Hashtag (hashtag_name) VALUES (:hashtag_name)');

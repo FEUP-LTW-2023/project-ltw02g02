@@ -28,6 +28,10 @@
       <p><strong>Name:</strong> <?=htmlentities($_SESSION['user_name'])?></p>
       <p><strong>Username:</strong> <?=htmlentities($_SESSION['username'])?></p>
       <p><strong>Email:</strong> <?=htmlentities($_SESSION['email'])?></p>
+      <?php if ($user_type != 'Client') { ?>
+        <p><strong>Type:</strong> <?=$_SESSION['user_type']?></p>
+        <p><strong>Department:</strong> <?=$_SESSION['user_depart_name']?></p>
+      <?php } ?>
       <!-- <p><strong>Address:</strong> 123 Main St, Anytown USA</p> -->
     </div>
     <div class="profile-buttons">
@@ -35,6 +39,7 @@
         <a href="../pages/adminControl.php" class="profile-btn">Admin Control</a>
       <?php } ?>
       <a href="../pages/profile.php?edit" class="profile-btn">Edit Profile</a>
+      <a href="../pages/changePassword.action.php" class="profile-btn">Change Password</a>
       <a href="../actions/logout.action.php" class="profile-btn">Logout</a>
     </div>
   </div>

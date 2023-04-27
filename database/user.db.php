@@ -21,7 +21,7 @@
 
     function getUserByUsername(PDO $dbh, $username) {
         try {
-            $stmt = $dbh->prepare('SELECT * FROM User WHERE username = ?');
+            $stmt = $dbh->prepare('SELECT * FROM User LEFT JOIN Department ON user_depart_id = depart_id WHERE username = ?');
             
             $stmt->execute(array($username));
 
@@ -35,7 +35,7 @@
 
     function getUserByID(PDO $dbh, $user_id) {
         try {
-            $stmt = $dbh->prepare('SELECT * FROM User WHERE user_id = ?');
+            $stmt = $dbh->prepare('SELECT * FROM User LEFT JOIN Department ON user_depart_id = depart_id WHERE user_id = ?');
             
             $stmt->execute(array($user_id));
 

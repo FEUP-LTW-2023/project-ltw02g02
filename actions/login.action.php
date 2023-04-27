@@ -38,6 +38,7 @@
     $_SESSION['email'] = $user['email'];
     $_SESSION['user_type'] = $user['user_type'];
     $_SESSION['user_depart_id'] = $user['depart_id'];
+    $_SESSION['user_depart_name'] = $user['depart_name'];
     
     header('Location: ../pages/profile.php');
 ?>
