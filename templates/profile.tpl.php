@@ -39,7 +39,7 @@
         <a href="../pages/adminControl.php" class="profile-btn">Admin Control</a>
       <?php } ?>
       <a href="../pages/profile.php?edit" class="profile-btn">Edit Profile</a>
-      <a href="../pages/changePassword.action.php" class="profile-btn">Change Password</a>
+      <a href="../pages/changePassword.php" class="profile-btn">Change Password</a>
       <a href="../actions/logout.action.php" class="profile-btn">Logout</a>
     </div>
   </div>

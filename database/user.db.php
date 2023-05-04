@@ -65,6 +65,22 @@
         return true;
     }
 
+    function changePassword(PDO $dbh, $user_id, $password) {
+        try {
+            $stmt = $dbh->prepare('UPDATE User SET user_password = :user_password WHERE user_id = :user_id');
+
+            $stmt->bindParam(':user_id', $user_id);
+            $stmt->bindParam(':user_password', $password);
+            
+            $stmt->execute();
+        } catch (PDOExecption $e) {
+            echo $e->getMessage();
+            exit(0);
+        }
+
+        return true;
+    }
+
     function getAllAgents(PDO $dbh) {
         try {
             $stmt = $dbh->prepare('SELECT * FROM User WHERE user_type != ?');
