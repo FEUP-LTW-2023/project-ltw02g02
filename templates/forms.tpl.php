@@ -36,6 +36,22 @@
   </div>
     <?php } ?>
 
+<?php function output_changePassword() { ?>
+  <div class="container">
+    <h2>Change Password</h2>
+    <form action="../actions/changePassword.action.php" method="post">
+      <label for="password">Current Password:</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+      <label for="new_password">Create new password:</label>
+      <input type="password" id="new_password" name="new_password" required placeholder="Enter the new password">
+      <label for="confirm_password">Confirm new password:</label>
+      <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm the new password">
+      <input type="submit" value="Update Password">
+    </form>
+  </div>
+    <?php } ?>
+
+
 <?php function output_createTicket($departments) { ?>
   <div class="container">
     <h2>Create a New Ticket</h2>
