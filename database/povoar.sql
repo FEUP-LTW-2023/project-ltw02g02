@@ -15,4 +15,8 @@ INSERT INTO Ticket (ticket_id, ticket_subject, ticket_description, ticket_priori
 
 --INSERT INTO TicketInquiry (inquiry_id, ticket_id, user_id, comment, created_at) VALUES ();
 
---INSERT INTO Faq (faq_id, question, answer) VALUES ();
+INSERT INTO TicketFAQ (ticket_faq_id,ticket_id,faq_id) VALUES (1,1,1);
+
+
+INSERT into Faq(faq_id,question,answer) Values (1,"Alguem viu","Sim eu vi ");
+

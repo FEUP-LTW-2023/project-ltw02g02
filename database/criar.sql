@@ -75,6 +75,13 @@ CREATE TABLE Faq (
   answer TEXT NOT NULL
 );
 
+CREATE TABLE TicketFAQ (
+  ticket_faq_id INTEGER PRIMARY KEY,
+  ticket_id INTEGER NOT NULL REFERENCES Ticket (ticket_id),
+  faq_id INTEGER NOT NULL REFERENCES Faq (faq_id)
+);
+
+
 
 
 

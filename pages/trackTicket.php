@@ -22,10 +22,19 @@
     $departments = getAllDepartments($dbh);
     $agents = getAllAgents($dbh);
     $hashtags = [0,1,2]; //getAllhashtags($dbh);
+    $questions = getAllQuestions($dbh, $ticket_id);
+    $answers = getAllAnswers($dbh, $ticket_id);
+
 
 
     output_header();
     if ($_SESSION['user_type'] !== 'Client') output_trackEditTicket($ticket, $edit, $statuses, $departments, $agents, $hashtags);
     else output_trackTicket($ticket);
+
+
+    output_trackTicketQuestions($questions, $answers);
+
+    
+    
     output_footer();
 ?>

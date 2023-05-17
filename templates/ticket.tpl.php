@@ -175,3 +175,28 @@
       </div>
   </div>
   <?php } ?>
+
+  <?php
+
+function output_trackTicketQuestions($questions, $answers)
+{
+    ?>
+    <div class="container" id="track_ticket">
+        <h2>Ticket Questions</h2>
+        <?php if (!empty($answers)) { ?>
+            <?php foreach ($questions as $key => $question) { ?>
+                <div class="question">
+                    <p><strong>Question:</strong> <?= htmlentities($question) ?></p>
+                    <?php if (isset($answers[$key])) { ?>
+                        <p><strong>Answer:</strong> <?= htmlentities($answers[$key]) ?></p>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
+            <p>No answers available.</p>
+        <?php } ?>
+    </div>
+    <?php
+}
+
+

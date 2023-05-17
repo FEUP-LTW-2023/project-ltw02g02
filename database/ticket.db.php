@@ -140,4 +140,52 @@
 
         return $tickets;
     }
+
+
+    function getAllQuestions(PDO $dbh, $ticket_id) {
+        try {
+            $stmt = $dbh->prepare('SELECT Faq.question, Faq.answer 
+            FROM TicketFAQ 
+            JOIN Faq ON TicketFAQ.faq_id = Faq.faq_id 
+            WHERE TicketFAQ.ticket_id = :ticket_id');
+    
+            $stmt->bindParam(':ticket_id', $ticket_id);
+            $stmt->execute();
+    
+            $questions = $stmt->fetchAll();
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    
+        return $questions;
+    }
+
+    function getAllAnswers(PDO $dbh, $ticket_id) {
+        try {
+            $stmt = $dbh->prepare('SELECT Faq.answer 
+            FROM TicketFAQ 
+            JOIN Faq ON TicketFAQ.faq_id = Faq.faq_id 
+            WHERE TicketFAQ.ticket_id = :ticket_id');
+    
+            $stmt->bindParam(':ticket_id', $ticket_id);
+            $stmt->execute();
+    
+            $answers = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);
+        } catch (PDOException $e) {
+            echo $e->getMessage();{
+                echo "Error: " . $e->getMessage();
+                echo "Error code: " . $e->getCode();
+                // Outras informações relevantes para depuração
+            }
+            
+        }
+
+    
+        return $answers;
+    }
+    
+
+   
+    
 ?>
+
