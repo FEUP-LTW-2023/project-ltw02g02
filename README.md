@@ -1,7 +1,7 @@
 # LTW Project 22/23 - Trouble Tickets Website
 
-> - David Ferreira (upXXX)
-> - Luiz Queiroz (upXXX)
+> - David Ferreira (up202006302)
+> - Luiz Queiroz (up202102362)
 > - Pedro Camargo (up202102365)
 
 ## Objective
