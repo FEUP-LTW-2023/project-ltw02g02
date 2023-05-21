@@ -37,15 +37,5 @@ The minimum expected set of requirements were the following:
   - Assign agents to departments
   - Control the whole system
 
-## Suggested additional requirements
-- Tickets can have documents attached to them (both by clients and agents)
-- Admins should be able to see key performance indicators and other statistics (e.g., number of tickets closed by agent, number of open tickets per day)
-- Agents can belong to more than one department
-- Agents can see a client's history
-- Agents can watch tickets not assigned to them (e.g., when transferring a ticket, the agent can check a box stating that he still wants to follow the ticket)
-- Tickets can be merged together or marked as duplicates from another ticket
-- Tickets can have to-do lists that must be completed before the ticket is closed
-- Tasks can also be assigned to agents
-
 ## Technologies used
 - HTML, CSS, PHP, Javascript, Ajax/JSON, PDO/SQL (using sqlite)
