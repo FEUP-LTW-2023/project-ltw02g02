@@ -8,7 +8,7 @@ use PDOException;
 class TicketsHashtagsDao {
     // Conexão com o banco de dados SQLite
     private $db;
-    private $db_file = "../bancodedados.db";
+    private $db_file = "C:/sistema_tickets/bancodedados.db";
     public function __construct() {
 
         try {

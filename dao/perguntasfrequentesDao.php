@@ -7,7 +7,7 @@ use PDOException;
 
 class PerguntasFrequentesDao {
     // Configurações do banco de dados
-    private $db_file = "../bancodedados.db";
+    private $db_file = "C:/sistema_tickets/bancodedados.db";
     private $conn;
 
     public function __construct() {

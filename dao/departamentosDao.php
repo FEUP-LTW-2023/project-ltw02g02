@@ -8,7 +8,7 @@ class DepartamentosDao {
 
     // Conectar ao banco de dados
     private $db;
-    private $db_file = "../bancodedados.db";
+    private $db_file = "C:/sistema_tickets/bancodedados.db";
 
     public function __construct() {
 
