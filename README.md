@@ -40,11 +40,11 @@ The minimum expected set of requirements were the following:
 ## Technologies used
 - HTML, CSS, PHP, Javascript, Ajax/JSON, PDO/SQL (using sqlite)
 
-
-
- - Commands to run 
+## Commands to run 
    
-  - git clone https://github.com/FEUP-LTW-2023/project-ltw02g02.git
-  - git checkout entrega
-  - php -S localhost:8080 -t public/
+   ```
+  git clone https://github.com/FEUP-LTW-2023/project-ltw02g02.git
+  git checkout entrega
+  php -S localhost:8080 -t public/
+  ```
   - Go to any browser you want and write www.localhost:8080/login.html 
